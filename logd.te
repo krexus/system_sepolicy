@@ -32,6 +32,7 @@ userdebug_or_eng(`get_prop(logd, logpersistd_logging_prop)')
 
 r_dir_file(logd, domain)
 
+allow logd init:fifo_file { read write };
 allow logd kernel:system syslog_mod;
 
 control_logd(logd)
